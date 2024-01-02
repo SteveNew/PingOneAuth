@@ -30,6 +30,8 @@ Event added apart from the normal TWebBrowser ones:
 
 An Authorize method is call to start the process after the properties are set. After sucessfull authentication (which might use MFA), the public properties Userid and GreetName are set.
 
+There is a companion blog post: https://fixedbycode.blogspot.com/2024/01/just-ping-someone.html
+
 This is still a first working version.
 
 /Enjoy
