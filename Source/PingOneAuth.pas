@@ -50,7 +50,7 @@ type
     FUserId: string;
     FGreetName: string;
     FUserIdClaim: string;
-    FOnAuthorized: TNotifyEvent;
+    FOnAuthenticated: TNotifyEvent;
     FOnDenied: TNotifyEvent;
   protected
     { Protected declarations }
@@ -74,7 +74,7 @@ type
     property Scope: string read FScope write FScope;
     property ResponseType: string read FResponseType write FResponseType;
     property UserIdClaim: string read FUserIdClaim write FUserIdClaim;
-    property OnAuthorized: TNotifyEvent read FOnAuthorized write FOnAuthorized;
+    property OnAuthenticated: TNotifyEvent read FOnAuthenticated write FOnAuthenticated;
     property OnDenied: TNotifyEvent read FOnDenied write FOnDenied;
   end;
 
@@ -172,8 +172,8 @@ begin
         LKey.Free;
       end;
       // If we do not get the OpenId Connect profile scope back - we will not know who got autenticated, so...
-      if (FUserId<>'') and Assigned(OnAuthorized) then
-        OnAuthorized(Self);
+      if (FUserId<>'') and Assigned(OnAuthenticated) then
+        OnAuthenticated(Self);
     end
     else
     begin

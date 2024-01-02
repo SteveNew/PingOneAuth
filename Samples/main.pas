@@ -20,7 +20,7 @@ type
     btnAuth: TButton;
     PingOneAuth: TPingOneAuth;
     procedure btnAuthClick(Sender: TObject);
-    procedure PingOneAuthAuthorized(Sender: TObject);
+    procedure PingOneAuthAuthenticated(Sender: TObject);
     procedure PingOneAuthDenied(Sender: TObject);
   private
     { Private declarations }
@@ -54,7 +54,7 @@ begin
   PingOneAuth.Authorize;
 end;
 
-procedure TForm6.PingOneAuthAuthorized(Sender: TObject);
+procedure TForm6.PingOneAuthAuthenticated(Sender: TObject);
 begin
   ShowMessage('Welcome '+PingOneAuth.GreetName+'!'+sLineBreak+sLineBreak+'You have be authenticated as userId: '+PingOneAuth.UserId);
 end;

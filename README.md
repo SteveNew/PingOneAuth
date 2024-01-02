@@ -25,7 +25,7 @@ The following properties needs to be set on the component - sample values shown:
 
 Event added apart from the normal TWebBrowser ones:
 
-- OnAuthorized - fires when successfull authenticated
+- OnAuthenticated - fires when successfull authenticated
 - OnDenied - fires when no valid id_token is obtained
 
 An Authorize method is call to start the process after the properties are set. After sucessfull authentication (which might use MFA), the public properties Userid and GreetName are set.

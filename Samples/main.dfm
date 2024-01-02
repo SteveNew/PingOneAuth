@@ -140,7 +140,7 @@ object Form6: TForm6
     Scope = 'openid profile'
     ResponseType = 'code'
     UserIdClaim = 'preferred_username'
-    OnAuthorized = PingOneAuthAuthorized
+    OnAuthenticated = PingOneAuthAuthenticated
     OnDenied = PingOneAuthDenied
     ControlData = {
       4C000000BB1F0000E42A00000000000000000000000000000000000000000000
