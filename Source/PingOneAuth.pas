@@ -15,6 +15,7 @@ const
 
 type
   TPingOneClaims = class(TJWTClaims)
+  // Adding some given by the OpenID Connect scope: profile
   private
     function GetPreferredUsername: string;
     procedure SetPreferredUsername(const Value: string);
@@ -170,7 +171,8 @@ begin
       finally
         LKey.Free;
       end;
-      if Assigned(OnAuthorized) then
+      // If we do not get the OpenId Connect profile scope back - we will not know who got autenticated, so...
+      if (FUserId<>'') and Assigned(OnAuthorized) then
         OnAuthorized(Self);
     end
     else
