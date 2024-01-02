@@ -3,6 +3,8 @@
 
 This is a TWebBrowser decendant handling the Authentication process against the PingOne IAM platform - including MFA.
 
+![AuthTest1](https://github.com/SteveNew/PingOneAuth/assets/1895619/b16c2ba6-b6c8-4873-82bf-7ba68a7fc46d)
+
 The purpose is only to get the userId and a full name for greetings - from an OpenID Connect Auth process - so that this info can be used to give a more secure and correct authentication compared to a single application-centric user authentication.
 
 Prerequisite:
