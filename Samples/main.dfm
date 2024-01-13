@@ -131,19 +131,20 @@ object Form6: TForm6
     OnClick = btnAuthClick
   end
   object PingOneAuth: TPingOneAuth
-    Left = 488
+    Left = 495
     Top = 8
-    Width = 307
+    Width = 300
     Height = 415
     Anchors = [akLeft, akTop, akRight, akBottom]
     TabOrder = 10
+    SelectedEngine = EdgeIfAvailable
     Scope = 'openid profile'
     ResponseType = 'code'
-    UserIdClaim = 'preferred_username'
+    UserIdClaim = preferred_username
     OnAuthenticated = PingOneAuthAuthenticated
     OnDenied = PingOneAuthDenied
     ControlData = {
-      4C000000BB1F0000E42A00000000000000000000000000000000000000000000
+      4C000000021F0000E42A00000000000000000000000000000000000000000000
       000000004C000000000000000000000001000000E0D057007335CF11AE690800
       2B2E126208000000000000004C0000000114020000000000C000000000000046
       8000000000000000000000000000000000000000000000000000000000000000
