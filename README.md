@@ -21,7 +21,7 @@ The following properties needs to be set on the component - sample values shown:
 - ResponseType: code
 - Scope: openid profile
 - TokenEndpoint: /as/token
-- UserIdClaim: preferred_username (currently ignored)
+- UserIdClaim: preferred_username (others are: email and sub - one not being unique and the other being GUID so..)
 
 Event added apart from the normal TWebBrowser ones:
 
@@ -32,6 +32,6 @@ An Authorize method is call to start the process after the properties are set. A
 
 There is a companion blog post: https://fixedbycode.blogspot.com/2024/01/just-ping-someone.html
 
-This is still a first working version.
+Due to the usage of "strict javascript" during MFA setup - IE is not a usefull SelectEngine - so Edge mode and deployment of the WebView2Loader.dll with your application is the preferable way.
 
 /Enjoy
